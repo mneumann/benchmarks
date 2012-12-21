@@ -7,5 +7,8 @@ dvec1: dvec1.rs
 dvec2: dvec2.rs
 	${RUST} ${OPTS} dvec2.rs
 
+slist1: slist1.rs
+	${RUST} ${OPTS} slist1.rs
+
 clean:
-	rm dvec1 dvec2
+	rm dvec1 dvec2 slist1

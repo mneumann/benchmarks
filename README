@@ -12,3 +12,12 @@ Dynamic string array test.
 Append a string n-times to an array and return random element.
 Should also include at least one string concatenation.
 Repeat the whole r-times.
+
+slist1 n r
+----------
+
+Single linked list benchmark.
+Prepend an integer n-times to the list.
+This can also be used to stress the GC mark/sweep as a lot of pointers have
+to be traversed.
+Repeat the whole r-times.

@@ -4,14 +4,16 @@ import "fmt"
 import "os"
 import "strconv"
 import "math/rand"
+import "container/list"
 
-func f(n uint) string {
-  v := make([]string, 0)
+func f(n uint) uint {
+  l := list.New();
+
   var c uint = 0
   for ; c < n; c++ {
-    v = append(v, strconv.Itoa(int(c)) + "x") 
+    l.PushFront(c)
   }
-  return v[rand.Intn(int(n))]
+  return uint(rand.Intn(int(n)))
 }
 
 func main() {
@@ -25,11 +27,11 @@ func main() {
     return
   }
 
-  v := make([]string, 0)
+  l := list.New();
   var c uint64 = 0
   for ; c < r; c++ {
-    v = append(v, f(uint(n)))
+    l.PushFront(f(uint(n)))
   }
 
-  fmt.Println(v[0]) 
+  fmt.Println(l.Front().Value) 
 }

@@ -15,7 +15,6 @@ func f(n uint) uint {
 }
 
 func main() {
-  fmt.Println(os.Args)
   n, err := strconv.ParseUint(os.Args[1], 10, 64)
   if err != nil {
     return
