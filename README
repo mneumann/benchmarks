@@ -1,0 +1,14 @@
+dvec1 n r
+---------
+
+Dynamic integer array test.
+Append an uin64 value n-times to an array and return random element.
+Repeat the whole r-times.
+
+dvec2 n r
+---------
+
+Dynamic string array test.
+Append a string n-times to an array and return random element.
+Should also include at least one string concatenation.
+Repeat the whole r-times.
