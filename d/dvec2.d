@@ -21,7 +21,7 @@ void main(string args[])
 {
   ulong n = to!ulong(args[1]);
   ulong r = to!ulong(args[2]);
-  ulong v[];
+  string v[];
   auto app = appender(v);
 
   for (ulong c = 0; c < r; ++c) {
@@ -29,6 +29,6 @@ void main(string args[])
   }
 
   assert(app.data.length == r);
- 
+
   writeln(app.data[0]);
 }
