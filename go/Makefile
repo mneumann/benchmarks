@@ -7,5 +7,8 @@ dvec2: dvec2.go
 slist1: slist1.go
 	go build slist1.go
 
+threads: threads.go
+	go build threads.go
+
 clean:
-	rm -f dvec1 dvec2 slist1
+	rm -f dvec1 dvec2 slist1 threads
