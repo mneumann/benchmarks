@@ -5,3 +5,6 @@ dvec1: dvec1.cc
 
 dvec2: dvec2.cc
 	${CC} -O3 dvec2.cc -o dvec2
+
+clean:
+	rm -f dvec1 dvec2

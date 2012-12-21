@@ -3,3 +3,6 @@ dvec1: dvec1.go
 
 dvec2: dvec2.go
 	go build dvec2.go
+
+clean:
+	rm -f dvec1 dvec2

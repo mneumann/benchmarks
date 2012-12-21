@@ -7,3 +7,6 @@ dvec2:
 	echo "#!/bin/sh" > dvec2
 	echo 'ruby $$0.rb $$*' >> dvec2
 	chmod +x dvec2
+
+clean:
+	rm -f dvec1 dvec2
