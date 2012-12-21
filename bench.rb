@@ -18,10 +18,12 @@ def run_all
   BENCH.each {|bench|
     PARMS[bench].each {|parm|
       LANG.each {|lang|
-	cmd = "#{lang}/#{bench} #{parm}"
-	`echo #{cmd} >> #{LOG}`
-	p `time -p -a -o #{LOG} #{cmd}`
-	`echo ---------------------------------------- >> #{LOG}`
+        1.upto(2) do |iter|
+          cmd = "#{lang}/#{bench} #{parm}"
+          `echo '#{cmd} (#{iter})' >> #{LOG}`
+          p `time -p -a -o #{LOG} #{cmd}`
+          `echo ---------------------------------------- >> #{LOG}`
+        end
       }
       `echo ---------------------------------------- >> #{LOG}`
     }
