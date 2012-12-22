@@ -10,5 +10,8 @@ dvec2: dvec2.rs
 slist1: slist1.rs
 	${RUST} ${OPTS} slist1.rs
 
+threads: threads.rs
+	${RUST} ${OPTS} threads.rs
+
 clean:
-	rm dvec1 dvec2 slist1
+	rm dvec1 dvec2 slist1 threads
